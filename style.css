@@ -2,7 +2,6 @@
   margin: 0px;
   text-align: center;
   font-family: 'britannic';
-  overflow: hidden;
 }
 
 body {
@@ -22,6 +21,64 @@ body {
   margin: 50px;
   font-size: 5rem;
   color: rgb(243, 187, 4);
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .input {
+    transform: scale(0.75);
+  }
+
+  .title {
+    transform: scale(0.75);
+    margin: 10px;
+  }
+}
+
+.counter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.count {
+  margin: 15px;
+  background-color: rgb(243, 187, 4);
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+#total {
+  height: 2.9rem;
+  width: 2.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#done {
+  background-color: rgb(98, 219, 68);
+  margin-left: 35px;
+  height: 2.9rem;
+  width: 2.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle {
@@ -115,7 +172,8 @@ body {
   0% {
     transform: translateY(0px);
   }
-  50%{
+
+  50% {
     transform: translateY(10px);
   }
 }
@@ -141,13 +199,12 @@ body {
 
 
 .card:hover {
-  transform: scale(1.1);
-  transition: 0.5;
+  background-color: rgb(214, 165, 5);
 }
 
 .remove {
   background-color: aliceblue;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
 }

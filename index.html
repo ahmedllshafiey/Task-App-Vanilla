@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="./public/javascript.svg" type="image/x-icon">
-  <title>Task App</title>
+  <title>Task Man</title>
 </head>
 
 <body>
@@ -19,6 +19,10 @@
     <div class="input">
       <input type="text" placeholder="Enter the Task here" class="task-text" maxlength="70">
       <button class="btn-add">Add</button>
+      <div class="counter">
+        <div class="count" id="total">0</div>
+        <div class="count" id="done">0</div>
+      </div>
     </div>
     <div class="task-list"></div>
   </div>
