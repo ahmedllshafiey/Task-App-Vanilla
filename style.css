@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  text-align: center;
+  font-family: 'britannic';
+  overflow: hidden;
+}
+
+body {
+  height: auto;
+  width: auto;
+  background-color: rgb(27, 117, 201);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 50px;
+  font-size: 5rem;
+  color: rgb(243, 187, 4);
+}
+
+.circle {
+  height: 500px;
+  width: 500px;
+  background-color: aqua;
+  border-radius: 50%;
+  opacity: 0.1;
+  position: fixed;
+  z-index: -5;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2)
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+.one {
+  top: -10%;
+  left: 50%;
+  animation-name: scale;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+}
+
+
+
+.two {
+  top: 20%;
+  right: 70%;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+  animation-delay: 2s;
+}
+
+.three {
+  top: 50%;
+  left: 40%;
+  animation-name: scale;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+  animation-delay: 2s;
+}
+
+.task-text {
+  font-size: 1.2rem;
+  height: 4rem;
+  width: 25rem;
+  border-radius: 10px;
+  outline: hidden;
+}
+
+.btn-add {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  height: 4.3rem;
+  width: 5rem;
+  outline: hidden;
+  background-color: rgb(243, 187, 4);
+  color: rgb(27, 117, 201);
+  margin: 20px;
+}
+
+.task-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+}
+
+.card {
+  height: auto;
+  width: 20vh;
+  background-color: rgb(243, 187, 4);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  word-break: break-all;
+  color: rgb(27, 117, 201);
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px black;
+  animation-name: up;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5;
+}
+
+.remove {
+  background-color: aliceblue;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
